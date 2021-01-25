@@ -20,8 +20,8 @@ app.get('/', (req, resp) => {
   console.log(req, resp);
 });
 
-app.get('/house', (req, resp) => {
-  cocktails.find({}).then(cocktail => {
+app.get('/cocktails', (req, resp) => {
+  Cocktails.find({}).then(cocktail => {
     resp.json(cocktail);
   });
 });
