@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.Promise = Promise;
+// mongoose.Promise = Promise;
+promise;
 
 let mongoURI = '';
 if (process.env.NODE_ENV === 'production') {
