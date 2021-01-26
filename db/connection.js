@@ -1,20 +1,13 @@
 const mongoose = require('mongoose');
 
-// mongoose.Promise = Promise;
-promise;
-
-let mongoURI = '';
-if (process.env.NODE_ENV === 'production') {
-  mongoURI = process.env.DB_URL;
-} else {
-  mongoURI = 'mongodb://localhost/cocktails';
-}
+// Connect to db and server
+mongoURI = 'mongodb://127.0.0.1:27017/cocktails';
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true })
-  .then(instance =>
-    console.log(`Connected to db: ${instance.connections[0].name}`)
-  )
-  .catch(error => console.log('Connection failed!', error));
+  .then(() => {
+    console.log('Database connection successful');
+  })
+  .catch(err => console.log('Error! Database connection failed! ', err));
 
 module.exports = mongoose;
