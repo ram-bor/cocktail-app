@@ -1,19 +1,20 @@
-const mongoose = require('mongoose');
 const express = require('express');
+const dotenv = require('dotenv');
+
+// Load env vars
+dotenv.config({ path: './config/config.env' });
+
 const app = express();
-// const router = express.Router();
-const port = 5000;
+
+const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
-const Cocktail = require('./models/cocktail-model');
 
 // mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
+// mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-app.get('/', router);
 
 // app.get('/', (req, resp) => {
 //   resp.redirect('/cocktails');
@@ -26,6 +27,6 @@ app.get('/', router);
 //   });
 // });
 
-app.listen(port, () => {
-  console.log(`App is listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
 });
