@@ -13,19 +13,12 @@ const bodyParser = require('body-parser');
 
 // mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
-// app.get('/', (req, resp) => {
-//   resp.redirect('/cocktails');
-//   console.log(req, resp);
-// });
-
-// app.get('/cocktails', (req, resp) => {
-//   Cocktails.find({}).then(cocktail => {
-//     resp.json(cocktail);
-//   });
-// });
+app.get('/', (req, resp) => {
+  resp.status(200).json({ success: true });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
