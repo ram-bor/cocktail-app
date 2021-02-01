@@ -14,16 +14,16 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 // support parsing of application/json type POST data
 app.use(bodyParser.json());
-app.use('/cocktails', cocktailController);
+app.use(require('/cocktails', cocktailController));
 
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
 
 // Routes
-app.get('/', (req, resp) => {
-  // testing json output
-  // resp.status(200).json({ success: true, msg: 'Show all cocktails' });
-});
+// app.get('/', (req, resp) => {
+// testing json output
+// resp.status(200).json({ success: true, msg: 'Show all cocktails' });
+// });
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
