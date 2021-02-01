@@ -1,5 +1,6 @@
-('use strict');
 const Cocktail = require('../models/cocktail-model');
+const express = require('express');
+const router = express.Router();
 
 module.exports = {
   // GET all Cocktails
@@ -9,3 +10,5 @@ module.exports = {
     });
   },
 };
+
+module.exports = router;
