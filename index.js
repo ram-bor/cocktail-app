@@ -9,7 +9,9 @@ dotenv.config({ path: './config/config.env' });
 // production port + dev port
 const PORT = process.env.PORT || 5000;
 
+// support parsing of application/x-www-form-urlencoded POST data
 app.use(bodyParser.urlencoded({ extended: true }));
+// support parsing of application/json type POST data
 app.use(bodyParser.json());
 
 // mongoose.Promise = global.Promise;
@@ -19,7 +21,6 @@ app.use(bodyParser.json());
 // Routes
 
 app.get('/', (req, resp) => {
-
   // testing json output
   // resp.status(200).json({ success: true, msg: 'Show all cocktails' });
 });
