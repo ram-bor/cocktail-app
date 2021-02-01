@@ -13,11 +13,11 @@ const bodyParser = require('body-parser');
 
 // mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
 
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.get('/', (req, resp) => {
-  resp.status(200).json({ success: true });
+  resp.status(200).json({ success: true, msg: 'Show all cocktails' });
 });
 
 app.listen(PORT, () => {
