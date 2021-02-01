@@ -1,7 +1,5 @@
 ('use strict');
-const mongoose = require('mongoose');
-
-Cocktail = mongoose.model('Cocktails');
+const Cocktail = require('../models/cocktail-model');
 
 module.exports = {
   // GET all Cocktails

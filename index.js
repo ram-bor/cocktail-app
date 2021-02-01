@@ -1,23 +1,27 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const app = express();
+const bodyParser = require('body-parser');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
 
-const app = express();
-
+// production port + dev port
 const PORT = process.env.PORT || 5000;
-const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // mongoose.Promise = global.Promise;
 
 // mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Routes
 
 app.get('/', (req, resp) => {
-  resp.status(200).json({ success: true, msg: 'Show all cocktails' });
+
+  // testing json output
+  // resp.status(200).json({ success: true, msg: 'Show all cocktails' });
 });
 
 app.listen(PORT, () => {
