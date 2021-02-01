@@ -6,8 +6,8 @@ Cocktail = mongoose.model('Cocktails');
 module.exports = {
   // GET all Cocktails
   showCocktails: (req, resp) => {
-    Cocktail.find({}).then(order => {
-      resp.json(order);
+    Cocktail.find({}).then(drink => {
+      resp.json(drink);
     });
   },
 };
