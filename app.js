@@ -20,12 +20,10 @@ app.use('/cocktails', cocktailController);
 // mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });
 
 // Routes
-app.use(require('./routes/cocktail-route'));
-
-// app.get('/', (req, resp) => {
-// testing json output
-// resp.status(200).json({ success: true, msg: 'Show all cocktails' });
-// });
+app.get('/', (req, resp) => {
+  // testing json output
+  // resp.status(200).json({ success: true, msg: 'Show all cocktails' });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
