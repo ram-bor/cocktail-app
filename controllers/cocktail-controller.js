@@ -5,7 +5,6 @@ module.exports = {
   showCocktails: (req, resp) => {
     Cocktail.find({}).then(drink => {
       resp.json(drink);
-      req.body();
     });
   },
 };

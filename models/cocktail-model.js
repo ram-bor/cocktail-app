@@ -3,7 +3,7 @@ const db = require('../db/connection');
 const Schema = mongoose.Schema;
 
 // Schema for Cocktails
-const cocktailModel = new Schema({
+const cocktailSchema = new Schema({
   name: String,
   category: String,
   glass: String, // will match glass name with variable set to image/icon to display
@@ -12,5 +12,3 @@ const cocktailModel = new Schema({
 });
 
 module.exports = mongoose.model('Cocktail', cocktailSchema);
-
-// Does it work?
