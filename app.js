@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const app = express();
 const bodyParser = require('body-parser');
 const cocktailController = require('./controllers/cocktail-controller');
+const Cocktail = require('./models/cocktail-model');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -14,7 +15,9 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 // support parsing of application/json type POST data
 app.use(bodyParser.json());
-app.use(require('/cocktails', cocktailController));
+
+app.use(require('./routes/route-index'));
+app.use(require('./routes/cocktail-route'));
 
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost/cocktails', { useMongoClient: true });

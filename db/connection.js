@@ -1,7 +1,6 @@
-const mongoose = require('mongoose');
-
+var mongoose = require('mongoose');
 // Connect to db and server
-const mongoURI = 'mongodb://127.0.0.1:27017/cocktails';
+var mongoURI = 'mongodb://127.0.0.1:27017/cocktail_db';
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true })
