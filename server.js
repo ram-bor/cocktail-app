@@ -14,13 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // support parsing of application/json type POST data
 app.use(bodyParser.json());
 
+// Routes
 app.use(require('./routes/cocktail-route'));
 
-// Routes
-// app.get('/', (req, resp) => {
-//   // testing json output
-//   resp.status(200).json({ success: true, msg: 'Show all cocktails' });
-// });
+// Set up Heroku ports
+app.set('port', process.env.PORT || 5000);
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
