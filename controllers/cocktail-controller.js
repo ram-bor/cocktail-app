@@ -1,9 +1,16 @@
 const Cocktail = require('../models/cocktail-model');
 
 module.exports = {
-  // show all Cocktails
+  // Display all Cocktails
+  // showCocktails: (req, resp) => {
+  //   Cocktail.find({ category: 'cocktail', category: 'ordinary drink' }).then(
+  //     drink => {
+  //       resp.json(drink);
+  //     }
+  //   );
+  // },
   showCocktails: (req, resp) => {
-    Cocktail.find({ category: 'cocktail' }).then(drink => {
+    Cocktail.find({}).then(drink => {
       resp.json(drink);
     });
   },

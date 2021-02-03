@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "NODE_ENV=production node server",
+    "start": "node server",
     "dev": "nodemon server"
   },
   "author": "Roberto Ramos",
