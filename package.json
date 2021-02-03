@@ -2,7 +2,7 @@
   "name": "cocktail-app",
   "version": "1.0.0",
   "description": "cocktail randomizer app",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -14,8 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "NODE_ENV=production node app",
-    "dev": "nodemon app"
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
   },
   "author": "Roberto Ramos",
   "license": "ISC"
