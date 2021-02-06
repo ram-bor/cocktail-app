@@ -16,14 +16,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //
 
+const cocktails = require('./routes/cocktail-route');
 // Routes
-app.use(require('./routes/cocktail-route'));
+app.use('/', cocktails);
+app.use('/', cocktails);
 
 // Set up Heroku ports
 app.set('port', process.env.PORT || 5000);
 
-//
-
+// Setting up server
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
 });
