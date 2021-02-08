@@ -17,8 +17,7 @@ app.use(bodyParser.json());
 app.use(timeout('5s'))
 app.use(haltOnTimedout)
 
-
-const cocktails = require('./routes/cocktail-route');
+const cocktails = require("./route/cocktail-route.js")
 
 // Routes
 app.use('/', cocktails);
