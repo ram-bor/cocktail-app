@@ -14,17 +14,11 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 // support parsing of application/json type post data
 app.use(bodyParser.json());
-app.use(timeout('5s'))
-app.use(haltOnTimedout)
 
-const cocktails = require("./route/cocktail-route.js")
+const cocktails = require("./routes/cocktail-route.js")
 
 // Routes
 app.use('/', cocktails);
-
-function haltOnTimedout (req, res, next) {
-  if (!req.timedout) next()
-}
 
 
 
