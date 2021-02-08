@@ -9,9 +9,9 @@ module.exports = {
       }
     );
   },
-  showCocktails: (req, resp) => {
-    Cocktail.find({}).then(drink => {
-      resp.json(drink);
-    });
-  },
+  // showCocktails: (req, resp) => {
+  //   Cocktail.find({}).then(drink => {
+  //     resp.json(drink);
+  //   });
+  // },
 };
