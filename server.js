@@ -19,6 +19,9 @@ const cocktails = require("./routes/cocktail-route.js")
 
 // Routes
 app.use('/', cocktails);
+app.get('/', function (req, res) {
+  throw new Error('BROKEN') // Express will catch this on its own.
+})
 
 
 
