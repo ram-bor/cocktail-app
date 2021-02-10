@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = Promise;
 
-let mongoURI = '';
+var mongoURI = '';
 
 // set up if statement for when in production (i.e. Heroku)
 if (process.env.NODE_ENV === 'production') {
