@@ -12,7 +12,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 mongoose
-  .connect(mongoURI, { useNewUrlParser: true })
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
   .then(() => {
     console.dir('Database connection successful');
   })
