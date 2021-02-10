@@ -15,15 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // support parsing of application/json type post data
 app.use(bodyParser.json());
 
-const cocktails = require("./routes/cocktail-route.js")
+const cocktails = require('./routes/cocktail-route.js');
 
 // Routes
 app.use('/', cocktails);
-app.get('/', function (req, res) {
-  throw new Error('BROKEN') // Express will catch this on its own.
-})
-
-
 
 // Set up Heroku ports
 app.set('port', process.env.PORT || 5000);
