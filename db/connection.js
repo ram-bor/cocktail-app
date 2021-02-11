@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 mongoose.Promise = Promise;
 
@@ -18,9 +19,10 @@ mongoose
     useUnifiedTopology: true,
     useFindAndModify: false,
   })
-  .then(() => {
-    console.dir('Database connection successful');
+  .then(instance => {
+    console.dir(`Connected to db: ${instance.connections[0].name}`);
   })
+ 
   .catch(err => console.dir('Error! Database connection failed! ', err));
 
 module.exports = mongoose;
