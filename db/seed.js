@@ -1,7 +1,7 @@
 var seeder = require('mongoose-seed');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb://localhost/sample-dev', () => {
+seeder.connect('mongodb://localhost/cocktails_db', () => {
   // Load models
   seeder.loadModels(['models/cocktail-model.js']);
 
