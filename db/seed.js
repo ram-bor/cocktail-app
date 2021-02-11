@@ -20,11 +20,13 @@ var data = [
     model: 'Cocktail',
     documents: [
       {
-        name: 'Doc1',
-        category: 'cocktail',
+        _id: '6008d8a075b35c21d9930a7b',
+        name: '3 mile long island iced tea',
+        category: 'ordinary drink',
         glass: 'collins glass',
-        ingredients: 'test',
-        instructions: 'testing',
+        ingredients: 'light rum',
+        instructions:
+          'fill   oz glass with ice and alcohol  fill     glass with cola and remainder with sweet   sour  top with dash of bitters and lemon wedge',
       },
     ],
   },
