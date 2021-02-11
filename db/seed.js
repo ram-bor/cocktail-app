@@ -1,17 +1,31 @@
-const { Seeder } = require('mongo-seeding');
+var seeder = require('mongoose-seed');
 
-// Connect to database property using URI
-const config = {
-  database: 'mongodb://localhost/cocktails_db',
-  dropDatabase: true,
-};
+// Connect to MongoDB via Mongoose
+seeder.connect('mongodb://localhost/sample-dev', () => {
+  // Load models
+  seeder.loadModels(['models/cocktail-model.js']);
 
-// Instantiate Seeder class
-const seeder = new Seeder(config);
-
-// Seed database with promises
-seeder.import(collections).then(() => {
-  console.log('Success, database seeded!').catch(err => {
-    'Oh no! There was an error.', err;
+  // Clear specified collections
+  seeder.clearModels(['Cocktail'], () => {
+    // Callback to populate DB once collections have been cleared
+    seeder.populateModels(data, () => {
+      seeder.disconnect();
+    });
   });
 });
+
+// Data array containing seed data - documents organized by Model
+var data = [
+  {
+    model: 'Cocktail',
+    documents: [
+      {
+        name: 'Doc1',
+        category: 'cocktail',
+        glass: 'collins glass',
+        ingredients: 'test',
+        instructions: 'testing',
+      },
+    ],
+  },
+];
