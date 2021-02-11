@@ -18,7 +18,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "seed": " node seed.js",
     "start": "node server",
     "dev": "nodemon server"
   },
