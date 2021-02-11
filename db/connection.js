@@ -22,7 +22,7 @@ mongoose
   .then(instance => {
     console.dir(`Connected to db: ${instance.connections[0].name}`);
   })
- 
+
   .catch(err => console.dir('Error! Database connection failed! ', err));
 
 module.exports = mongoose;
