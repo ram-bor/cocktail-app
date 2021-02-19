@@ -9,4 +9,5 @@ module.exports = {
       }
     );
   },
+  // will write more methods here
 };
