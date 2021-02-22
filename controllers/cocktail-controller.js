@@ -9,5 +9,9 @@ module.exports = {
       }
     );
   },
-  // will write more methods here
+  showRandomCocktail: (req, resp) => {
+    Cocktail.find({}).then(drink => {
+      resp.json(drink)
+    })
+  }
 };
