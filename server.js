@@ -19,6 +19,7 @@ const cocktails = require('./routes/cocktail-route.js');
 
 // Routes
 app.use('/', cocktails);
+// app.use('/', cocktails);
 
 // Set up Heroku ports
 app.set('port', process.env.PORT || 5000);
