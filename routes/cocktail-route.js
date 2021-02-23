@@ -5,6 +5,7 @@ router.get('/cocktails', cocktailController.showCocktails);
 router.get('/', (req, resp) => {
   resp.redirect('/cocktails');
 });
-router.get('/cocktails/cocktail', cocktailController.show)
+// router.get('/cocktails/:cocktail', cocktailController.showRandomCocktail);
+// s;
 
 module.exports = router;
