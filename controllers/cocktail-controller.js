@@ -10,8 +10,8 @@ module.exports = {
     );
   },
   showRandomCocktail: (req, resp) => {
-    Cocktail.find({}).then(drink => {
-      resp.json(drink)
-    })
-  }
+    Cocktail.aggregate([{ $sample: { size: 1 } }]).then(drink => {
+      resp.json(drink);
+    });
+  },
 };
