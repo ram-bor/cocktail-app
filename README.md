@@ -1,3 +1,9 @@
 # Cocktail App (Backend)
 
-An app to produce a random drink based on your preferences
+Developed a backend application for a frontend cocktail drink randomizer. Deployment made to Heroku to host data.
+
+## Technologies
+* MongoDB (imported from .csv file)
+* ExpressJS
+* NodeJS
+
