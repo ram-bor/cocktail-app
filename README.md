@@ -10,4 +10,4 @@ Developed a backend application for a frontend cocktail drink randomizer. The ap
 ## Installation
 
 ```npm install
-```npm run start
+  npm run start```
