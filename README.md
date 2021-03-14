@@ -16,4 +16,5 @@ Run ```npm install``` to install required packages
 
 In the terminal run command ```nodemon server```
 
+Open on Postman or run on browser using http://localhost:5000/cocktails to view data.
 
