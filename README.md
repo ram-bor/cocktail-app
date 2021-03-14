@@ -11,5 +11,9 @@ Developed a backend application for a frontend cocktail drink randomizer. The ap
 
 Clone repo to local machine
 
-Run ```npm install```
+
+Run ```npm install``` to install required packages
+
 In the terminal run command ```nodemon server```
+
+
