@@ -7,5 +7,7 @@ Developed a backend application for a frontend cocktail drink randomizer. The ap
 * ExpressJS
 * NodeJS
 
-# Steps to run on local environment
+## Installation
 
+```npm install
+```npm run start
