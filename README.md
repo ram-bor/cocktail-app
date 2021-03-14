@@ -9,5 +9,7 @@ Developed a backend application for a frontend cocktail drink randomizer. The ap
 
 ## Installation
 
-```npm install
-  npm run start```
+Clone repo to local machine
+
+Run ```npm install```
+In the terminal run command ```nodemon server```
