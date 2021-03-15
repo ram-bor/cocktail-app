@@ -9,11 +9,13 @@ module.exports = {
       }
     );
   },
+  // Display random Cocktail
   showRandomCocktail: (req, resp) => {
     Cocktail.aggregate([{ $sample: { size: 1 } }]).then(drink => {
       resp.json(drink);
     });
   },
+  // Display Cocktail by ID
   showCocktailById: (req, resp) => {
     Cocktail.findById(req.params.id).then(drink => {
       resp.json(drink);
