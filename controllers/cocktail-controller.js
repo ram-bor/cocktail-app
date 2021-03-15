@@ -14,4 +14,9 @@ module.exports = {
       resp.json(drink);
     });
   },
+  showCocktailById: (req, resp) => {
+    Cocktail.findById(req.params.id).then(drink => {
+      resp.json(drink);
+    });
+  },
 };
